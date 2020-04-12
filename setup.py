@@ -7,13 +7,13 @@ version_str = ".".join(str(n) for n in __version__)
 
 
 setup(
-    name = "django-uuid-upload-path",
+    name = "django-file-upload-path",
     version = version_str,
     license = "BSD",
     description = "Generate short UUIDs and use them as paths for uploaded media files in Django.",
-    author = "Dave Hall",
-    author_email = "dave@etianen.com",
-    url = "https://github.com/etianen/django-uuid-upload-path",
+    author = "Daniel Pantoja",
+    author_email = "panttojo@yandex.com",
+    url = "https://github.com/panttojo/django-file-upload-path",
     packages = [
         "uuid_upload_path",
     ],
@@ -27,12 +27,10 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.6",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.7",
         "Topic :: Internet :: WWW/HTTP",
     ],
+    python_requires='>=3.4',
 )

@@ -62,20 +62,13 @@ Support and announcements
 -------------------------
 
 Downloads and bug tracking can be found at the `main project
-website <http://github.com/etianen/django-uuid-upload-path>`_.
+website <https://github.com/panttojo/django-uuid-upload-path>`_.
 
 
 More information
 ----------------
 
-The django-uuid-upload-path project was developed by Dave Hall. You can get the
-code from the `django-uuid-upload-path project
-site <http://github.com/etianen/django-uuid-upload-path>`_.
-
-Dave Hall is a web developer, based in Cambridge, UK. You can
-usually find him on the Internet in a number of different places:
-
--  `Website <http://www.etianen.com/>`_
--  `Twitter <http://twitter.com/etianen>`_
--  `Google Profile <http://www.google.com/profiles/david.etianen>`_
+The django-uuid-upload-path project was developed by Dave Hall and forked for make a little customizations.
+You can get the code from the `django-uuid-upload-path project
+site <https://github.com/etianen/django-uuid-upload-path>`_.
 
