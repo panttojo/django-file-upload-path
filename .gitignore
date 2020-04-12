@@ -11,4 +11,5 @@ dist
 build
 MANIFEST
 *.egg-info/
-
+venv
+.vscode

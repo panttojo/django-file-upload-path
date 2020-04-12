@@ -1,6 +1,6 @@
 from __future__ import absolute_import, unicode_literals
 
-import posixpath
+from pathlib import Path
 
 from uuid_upload_path.uuid import uuid
 
@@ -10,8 +10,10 @@ def upload_to_factory(prefix):
     An upload path generator that uses compact UUIDs for filenames.
     """
     def get_upload_path(instance, filename):
-        name, ext = posixpath.splitext(filename)
-        return posixpath.join(prefix, uuid() + ext)
+        ext = ''.join(Path(filename).suffixes)
+        name_without_ext = filename.replace(ext, '')
+        full_name_with_uuid = ''.join([name_without_ext, '_', uuid(), ext])
+        return str(Path(prefix, full_name_with_uuid))
     return get_upload_path
 
 
@@ -21,7 +23,5 @@ def upload_to(instance, filename):
     on the instance model name, and uses a compact UUID for the filename.
     """
     opts = instance._meta
-    return upload_to_factory(posixpath.join(
-        opts.app_label,
-        instance.__class__.__name__.lower(),
-    ))(instance, filename)
+    instance_path = Path(opts.app_label, instance.__class__.__name__.lower())
+    return upload_to_factory(instance_path)(instance, filename)
